@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- Bootstrap -->
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/bootstrap.min.css') }}">
+    <title>Dojo Survay</title>
+</head>
+<body>
+    <br>
+    <br>
+    <form action="/result" method="post">
+        <div class="row">
+            <div class="col-3"></div>
+            <div class="col-6 card">
+                <br>
+                <div class="row">
+                    <div class="col-1"></div>
+                    <label class="col-5" for="name">Your Name:</label>
+                    <input class="col-5" type="text" name="name" id="name" placeholder="Enter your name here">
+                    <div class="col-1"></div>
+                </div>
+                <br>
+                <div class="row">
+                    <div class="col-1"></div>
+                    <label class="col-5" for="location">Dojo Location:</label>
+                    <select class="col-5" name="location" id="location">
+                        <option value="Silicon Valley">Silicon Valley, CA</option>
+                        <option value="Seattle">Seattle, WA</option>
+                        <option value="Los Angeles">Los Angeles, CA</option>
+                        <option value="Dallas">Dallas, TX</option>
+                        <option value="Chicago">Chicago, IL</option>
+                        <option value="Tulsa">Tulsa, OK</option>
+                        <option value="Tyson's Corner">Tyson's Corner, VA</option>
+                        <option value="East Bay">East Bay, CA</option>
+                    </select>
+                    <div class="col-1"></div>
+                </div>
+                <br>
+                <div class="row">
+                    <div class="col-1"></div>
+                    <label class="col-5" for="language">Favorite Language:</label>
+                    <select class="col-5" name="language" id="language">
+                        <option value="JavaScript">Java Script</option>
+                        <option value="Python">Python</option>
+                        <option value="Swift">Swift</option>
+                        <option value="Ruby">Ruby</option>
+                        <option value="Java">Java</option>
+                        <option value="C#">C#</option>
+                    </select>
+                    <div class="col-1"></div>
+                </div>
+                <br>
+                <div class="row">
+                    <div class="col-1"></div>
+                    <p class="col-10">Comment (optional):</p>
+                    <div class="col-1"></div>
+                </div>
+                <div class="row">
+                    <div class="col-1"></div>
+                    <textarea class="col-10" name="comment" id="comment" cols="30" rows="6"></textarea>
+                    <div class="col-1"></div>
+                </div>
+                <br>
+                <div class="row">
+                    <div class="col-9"></div>
+                    <button class="col-2" type="submit">Submit</button>
+                    <div class="col-1"></div>
+                </div>
+                <br>
+            </div>
+        </div>
+    </form>
+    <script type="text/javascript" src="{{ url_for('static', filename='js/jquery-3.3.1.slim.min.js') }}"></script>
+    <script type="text/javascript" src="{{ url_for('static', filename='js/popper.min.js') }}"></script>
+    <script type="text/javascript" src="{{ url_for('static', filename='js/bootstrap.min.js') }}"></script>
+</body>
+</html>
